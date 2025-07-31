@@ -1,0 +1,766 @@
+{
+  "directive": {
+    "header": {
+      "namespace": "System",
+      "name": "SynchronizeStateResponse",
+      "messageId": "ccbdd416-91504cf4-6ab2d1bf-b5df2b0d",
+      "refMessageId": "12b83254-8c9e-4094-9e00-b720e07b4d47"
+    },
+    "payload": {
+      "SessionId": "3167f8a6-9aeff426-44ced6-e92e39a4"
+    }
+  }
+}
+
+{
+  "directive": {
+    "payload": {
+      "input_start_ack": {
+        "request_start_time": 1753801897688450
+      }
+    },
+    "header": {
+      "name": "InputStartAck",
+      "refMessageId": "b97478c5-15a0-4fc5-a2e4-8201382890c6",
+      "messageId": "97c7f796-fed6ec54-f4d0f4d6-ea08e37e",
+      "namespace": "System"
+    }
+  }
+}
+
+{
+  "directive": {
+    "payload": {
+      "version": "tags/releases/alice/megamind/stable-547-1@17096596",
+      "force_server_request": false,
+      "header": {
+        "response_id": "3d1ff96a-fac33c7f-adaee3a4-cb4deecf",
+        "request_id": "b97478c5-15a0-4fc5-a2e4-8201382890c6",
+        "ref_message_id": "b97478c5-15a0-4fc5-a2e4-8201382890c6",
+        "session_id": "3167f8a6-9aeff426-44ced6-e92e39a4",
+        "dialog_id": "b6c1e1c4-9c8d-4443-a7d6-a6091d1138fd"
+      },
+      "response": {
+        "cards": [
+          {
+            "type": "text_with_button",
+            "card_id": "795da21e-cd0c0412-24b59b4-6b32fe03",
+            "text": "Одну секунду...",
+            "buttons": [
+              {
+                "type": "action",
+                "title": "Поискать в Яндексе",
+                "directives": [
+                  {
+                    "name": "open_uri",
+                    "payload": {
+                      "uri": "https://yandex.ru/search/?l10n=ru-RU&lr=10466&query_source=alice&text=%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20iphone%2015",
+                      "open_in_current_tab": null
+                    },
+                    "type": "client_action",
+                    "sub_name": "open_uri",
+                    "is_led_silent": true
+                  },
+                  {
+                    "name": "on_suggest",
+                    "payload": {
+                      "button_id": "81f0b5af-c15664d-da167877-573a20a3",
+                      "@request_id": "b97478c5-15a0-4fc5-a2e4-8201382890c6",
+                      "caption": "Поискать в Яндексе",
+                      "request_id": "b97478c5-15a0-4fc5-a2e4-8201382890c6",
+                      "scenario_name": "Search",
+                      "@scenario_name": "Vins"
+                    },
+                    "ignore_answer": true,
+                    "type": "server_action",
+                    "is_led_silent": true
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "card": {
+          "type": "text_with_button",
+          "card_id": "795da21e-cd0c0412-24b59b4-6b32fe03",
+          "text": "Одну секунду...",
+          "buttons": [
+            {
+              "type": "action",
+              "title": "Поискать в Яндексе",
+              "directives": [
+                {
+                  "name": "open_uri",
+                  "payload": {
+                    "uri": "https://yandex.ru/search/?l10n=ru-RU&lr=10466&query_source=alice&text=%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20iphone%2015",
+                    "open_in_current_tab": null
+                  },
+                  "type": "client_action",
+                  "sub_name": "open_uri",
+                  "is_led_silent": true
+                },
+                {
+                  "name": "on_suggest",
+                  "payload": {
+                    "button_id": "81f0b5af-c15664d-da167877-573a20a3",
+                    "@request_id": "b97478c5-15a0-4fc5-a2e4-8201382890c6",
+                    "caption": "Поискать в Яндексе",
+                    "request_id": "b97478c5-15a0-4fc5-a2e4-8201382890c6",
+                    "scenario_name": "Search",
+                    "@scenario_name": "Vins"
+                  },
+                  "ignore_answer": true,
+                  "type": "server_action",
+                  "is_led_silent": true
+                }
+              ]
+            }
+          ]
+        },
+        "experiments": {},
+        "directives_execution_policy": "BeforeSpeech",
+        "directives": [
+          {
+            "name": "open_uri",
+            "payload": {
+              "uri": "https://yandex.ru/search/?l10n=ru-RU&lr=10466&query_source=alice&text=%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20iphone%2015",
+              "open_in_current_tab": null
+            },
+            "type": "client_action",
+            "sub_name": "open_uri",
+            "is_led_silent": true
+          }
+        ]
+      },
+      "voice_response": {
+        "should_listen": false
+      },
+      "effective_alice_2_settings": {
+        "mode": "Base"
+      },
+      "counteractivation_features": {
+        "has_directive": true,
+        "scenario_features": {},
+        "has_client_directive": true
+      }
+    },
+    "header": {
+      "name": "VinsResponse",
+      "refMessageId": "b97478c5-15a0-4fc5-a2e4-8201382890c6",
+      "messageId": "53337216-e8d13e86-8fabe76d-7d9af5f9",
+      "namespace": "Vins"
+    }
+  }
+}
+
+{
+  "directive": {
+    "header": {
+      "namespace": "System",
+      "name": "SynchronizeStateResponse",
+      "messageId": "e12e6851-2777c7a7-122e1ce2-ef1135f9",
+      "refMessageId": "8c8bf510-ea70-45f4-a47e-856f73e28b2c"
+    },
+    "payload": {
+      "SessionId": "5802abbb-a8f225dc-70cb1fb0-fb507fbb"
+    }
+  }
+}
+
+{
+  "directive": {
+    "payload": {
+      "input_start_ack": {
+        "request_start_time": 1753801904485293
+      }
+    },
+    "header": {
+      "name": "InputStartAck",
+      "refMessageId": "855b1578-f5a0-4163-9bc9-1f14efb4d299",
+      "messageId": "953ac4ec-d73e46e5-18bd6654-dbbbf040",
+      "namespace": "System"
+    }
+  }
+}
+
+{
+  "directive": {
+    "payload": {
+      "version": "tags/releases/alice/megamind/stable-547-1@17096596",
+      "force_server_request": false,
+      "header": {
+        "response_id": "d809f181-95eaaff5-e32a71a1-24f3f5c5",
+        "request_id": "855b1578-f5a0-4163-9bc9-1f14efb4d299",
+        "ref_message_id": "855b1578-f5a0-4163-9bc9-1f14efb4d299",
+        "session_id": "5802abbb-a8f225dc-70cb1fb0-fb507fbb",
+        "dialog_id": "1ebd1323-2991-4345-b9c9-0b3da67dea02"
+      },
+      "response": {
+        "cards": [
+          {
+            "type": "text_with_button",
+            "card_id": "6988ccf6-42d34dc-5b674ab4-6d510942",
+            "text": "Ищу в Яндексе",
+            "buttons": [
+              {
+                "type": "action",
+                "title": "Поискать в Яндексе",
+                "directives": [
+                  {
+                    "name": "open_uri",
+                    "payload": {
+                      "uri": "https://yandex.ru/search/?l10n=ru-RU&lr=10466&query_source=alice&text=%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20samsung%20galaxy%20s%2023",
+                      "open_in_current_tab": null
+                    },
+                    "type": "client_action",
+                    "sub_name": "open_uri",
+                    "is_led_silent": true
+                  },
+                  {
+                    "name": "on_suggest",
+                    "payload": {
+                      "button_id": "47652fe0-955adcde-5fc6fd5e-46882dbc",
+                      "@request_id": "855b1578-f5a0-4163-9bc9-1f14efb4d299",
+                      "caption": "Поискать в Яндексе",
+                      "request_id": "855b1578-f5a0-4163-9bc9-1f14efb4d299",
+                      "scenario_name": "Search",
+                      "@scenario_name": "Vins"
+                    },
+                    "ignore_answer": true,
+                    "type": "server_action",
+                    "is_led_silent": true
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "card": {
+          "type": "text_with_button",
+          "card_id": "6988ccf6-42d34dc-5b674ab4-6d510942",
+          "text": "Ищу в Яндексе",
+          "buttons": [
+            {
+              "type": "action",
+              "title": "Поискать в Яндексе",
+              "directives": [
+                {
+                  "name": "open_uri",
+                  "payload": {
+                    "uri": "https://yandex.ru/search/?l10n=ru-RU&lr=10466&query_source=alice&text=%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20samsung%20galaxy%20s%2023",
+                    "open_in_current_tab": null
+                  },
+                  "type": "client_action",
+                  "sub_name": "open_uri",
+                  "is_led_silent": true
+                },
+                {
+                  "name": "on_suggest",
+                  "payload": {
+                    "button_id": "47652fe0-955adcde-5fc6fd5e-46882dbc",
+                    "@request_id": "855b1578-f5a0-4163-9bc9-1f14efb4d299",
+                    "caption": "Поискать в Яндексе",
+                    "request_id": "855b1578-f5a0-4163-9bc9-1f14efb4d299",
+                    "scenario_name": "Search",
+                    "@scenario_name": "Vins"
+                  },
+                  "ignore_answer": true,
+                  "type": "server_action",
+                  "is_led_silent": true
+                }
+              ]
+            }
+          ]
+        },
+        "experiments": {},
+        "directives_execution_policy": "BeforeSpeech",
+        "directives": [
+          {
+            "name": "open_uri",
+            "payload": {
+              "uri": "https://yandex.ru/search/?l10n=ru-RU&lr=10466&query_source=alice&text=%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20samsung%20galaxy%20s%2023",
+              "open_in_current_tab": null
+            },
+            "type": "client_action",
+            "sub_name": "open_uri",
+            "is_led_silent": true
+          }
+        ]
+      },
+      "voice_response": {
+        "should_listen": false
+      },
+      "effective_alice_2_settings": {
+        "mode": "Base"
+      },
+      "counteractivation_features": {
+        "has_directive": true,
+        "scenario_features": {},
+        "has_client_directive": true
+      }
+    },
+    "header": {
+      "name": "VinsResponse",
+      "refMessageId": "855b1578-f5a0-4163-9bc9-1f14efb4d299",
+      "messageId": "c408cf6b-1bb1ccf0-10eb779b-6b15358e",
+      "namespace": "Vins"
+    }
+  }
+}
+
+{
+  "directive": {
+    "header": {
+      "namespace": "System",
+      "name": "SynchronizeStateResponse",
+      "messageId": "74a705b1-3779175-3c3c4e31-43ee02c",
+      "refMessageId": "9f326137-710a-4b95-b5bc-14f94b7f8771"
+    },
+    "payload": {
+      "SessionId": "15aa6539-11f7f321-3a46867f-ebfb853e"
+    }
+  }
+}
+
+{
+  "directive": {
+    "payload": {
+      "input_start_ack": {
+        "request_start_time": 1753801911510435
+      }
+    },
+    "header": {
+      "name": "InputStartAck",
+      "refMessageId": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+      "messageId": "3c45e7b6-d55d1a61-dd9fa891-9329b430",
+      "namespace": "System"
+    }
+  }
+}
+
+{
+  "directive": {
+    "payload": {
+      "version": "tags/releases/alice/megamind/stable-547-1@17096596",
+      "force_server_request": true,
+      "header": {
+        "response_id": "e58684ac-70518edb-cf6ce799-a49587d7",
+        "request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+        "ref_message_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+        "session_id": "15aa6539-11f7f321-3a46867f-ebfb853e",
+        "dialog_id": "0ace57a2-ea22-4aa5-8b41-f7ffed96e6b5"
+      },
+      "response": {
+        "cards": [
+          {
+            "type": "simple_text",
+            "card_id": "7f6eace0-4511ef2f-3ba618c4-94787871",
+            "text": "350 $, а зачем вам?"
+          }
+        ],
+        "card": {
+          "type": "simple_text",
+          "card_id": "7f6eace0-4511ef2f-3ba618c4-94787871",
+          "text": "350 $, а зачем вам?"
+        },
+        "suggest": {
+          "items": [
+            {
+              "type": "action",
+              "title": "Купить хочу",
+              "directives": [
+                {
+                  "name": "type",
+                  "payload": {
+                    "text": "Купить хочу"
+                  },
+                  "type": "client_action",
+                  "sub_name": "gc_suggest",
+                  "is_led_silent": true
+                },
+                {
+                  "name": "on_suggest",
+                  "payload": {
+                    "button_id": "c8818376-daf46200-9b1e0bf4-ebe06c63",
+                    "@request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "caption": "Купить хочу",
+                    "request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "scenario_name": "GeneralConversation",
+                    "@scenario_name": "Vins",
+                    "@effective_language": "L_RUS"
+                  },
+                  "ignore_answer": true,
+                  "type": "server_action",
+                  "is_led_silent": true
+                }
+              ]
+            },
+            {
+              "type": "action",
+              "title": "Она их коллекционирует",
+              "directives": [
+                {
+                  "name": "type",
+                  "payload": {
+                    "text": "Она их коллекционирует"
+                  },
+                  "type": "client_action",
+                  "sub_name": "gc_suggest",
+                  "is_led_silent": true
+                },
+                {
+                  "name": "on_suggest",
+                  "payload": {
+                    "button_id": "58d34b31-507a7407-817eeb06-8f9d220c",
+                    "@request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "caption": "Она их коллекционирует",
+                    "request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "scenario_name": "GeneralConversation",
+                    "@scenario_name": "Vins",
+                    "@effective_language": "L_RUS"
+                  },
+                  "ignore_answer": true,
+                  "type": "server_action",
+                  "is_led_silent": true
+                }
+              ]
+            },
+            {
+              "type": "action",
+              "title": "Просто интересно",
+              "directives": [
+                {
+                  "name": "type",
+                  "payload": {
+                    "text": "Просто интересно"
+                  },
+                  "type": "client_action",
+                  "sub_name": "gc_suggest",
+                  "is_led_silent": true
+                },
+                {
+                  "name": "on_suggest",
+                  "payload": {
+                    "button_id": "fb54ae5c-95305fe5-9f3896a3-49ae0d8d",
+                    "@request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "caption": "Просто интересно",
+                    "request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "scenario_name": "GeneralConversation",
+                    "@scenario_name": "Vins",
+                    "@effective_language": "L_RUS"
+                  },
+                  "ignore_answer": true,
+                  "type": "server_action",
+                  "is_led_silent": true
+                }
+              ]
+            },
+            {
+              "type": "action",
+              "title": "Для постоянного пользования",
+              "directives": [
+                {
+                  "name": "type",
+                  "payload": {
+                    "text": "Для постоянного пользования"
+                  },
+                  "type": "client_action",
+                  "sub_name": "gc_suggest",
+                  "is_led_silent": true
+                },
+                {
+                  "name": "on_suggest",
+                  "payload": {
+                    "button_id": "809fb4ff-d0cde19c-e402d8fc-6b1c2e34",
+                    "@request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "caption": "Для постоянного пользования",
+                    "request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "scenario_name": "GeneralConversation",
+                    "@scenario_name": "Vins",
+                    "@effective_language": "L_RUS"
+                  },
+                  "ignore_answer": true,
+                  "type": "server_action",
+                  "is_led_silent": true
+                }
+              ]
+            },
+            {
+              "type": "action",
+              "title": "Чтобы мне не было скучно",
+              "directives": [
+                {
+                  "name": "type",
+                  "payload": {
+                    "text": "Чтобы мне не было скучно"
+                  },
+                  "type": "client_action",
+                  "sub_name": "gc_suggest",
+                  "is_led_silent": true
+                },
+                {
+                  "name": "on_suggest",
+                  "payload": {
+                    "button_id": "27b85862-a01b83fc-f116efd2-eec95a6b",
+                    "@request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "caption": "Чтобы мне не было скучно",
+                    "request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "scenario_name": "GeneralConversation",
+                    "@scenario_name": "Vins",
+                    "@effective_language": "L_RUS"
+                  },
+                  "ignore_answer": true,
+                  "type": "server_action",
+                  "is_led_silent": true
+                }
+              ]
+            },
+            {
+              "type": "action",
+              "title": "Для красоты",
+              "directives": [
+                {
+                  "name": "type",
+                  "payload": {
+                    "text": "Для красоты"
+                  },
+                  "type": "client_action",
+                  "sub_name": "gc_suggest",
+                  "is_led_silent": true
+                },
+                {
+                  "name": "on_suggest",
+                  "payload": {
+                    "button_id": "ccd6f9ab-b88f28d3-c6a065b1-1f705c50",
+                    "@request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "caption": "Для красоты",
+                    "request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "scenario_name": "GeneralConversation",
+                    "@scenario_name": "Vins",
+                    "@effective_language": "L_RUS"
+                  },
+                  "ignore_answer": true,
+                  "type": "server_action",
+                  "is_led_silent": true
+                }
+              ]
+            },
+            {
+              "type": "action",
+              "title": "Деньги нужны",
+              "directives": [
+                {
+                  "name": "type",
+                  "payload": {
+                    "text": "Деньги нужны"
+                  },
+                  "type": "client_action",
+                  "sub_name": "gc_suggest",
+                  "is_led_silent": true
+                },
+                {
+                  "name": "on_suggest",
+                  "payload": {
+                    "button_id": "bba5f9ff-8e9c23ce-5c5616d4-5684cce0",
+                    "@request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "caption": "Деньги нужны",
+                    "request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "scenario_name": "GeneralConversation",
+                    "@scenario_name": "Vins",
+                    "@effective_language": "L_RUS"
+                  },
+                  "ignore_answer": true,
+                  "type": "server_action",
+                  "is_led_silent": true
+                }
+              ]
+            },
+            {
+              "type": "action",
+              "title": "Для улицы",
+              "directives": [
+                {
+                  "name": "type",
+                  "payload": {
+                    "text": "Для улицы"
+                  },
+                  "type": "client_action",
+                  "sub_name": "gc_suggest",
+                  "is_led_silent": true
+                },
+                {
+                  "name": "on_suggest",
+                  "payload": {
+                    "button_id": "74deaa02-b28482d5-65de317b-105e9622",
+                    "@request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "caption": "Для улицы",
+                    "request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "scenario_name": "GeneralConversation",
+                    "@scenario_name": "Vins",
+                    "@effective_language": "L_RUS"
+                  },
+                  "ignore_answer": true,
+                  "type": "server_action",
+                  "is_led_silent": true
+                }
+              ]
+            },
+            {
+              "type": "action",
+              "title": "На выпускной",
+              "directives": [
+                {
+                  "name": "type",
+                  "payload": {
+                    "text": "На выпускной"
+                  },
+                  "type": "client_action",
+                  "sub_name": "gc_suggest",
+                  "is_led_silent": true
+                },
+                {
+                  "name": "on_suggest",
+                  "payload": {
+                    "button_id": "451e00e-e418278d-9c92a342-cfeb2f28",
+                    "@request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "caption": "На выпускной",
+                    "request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "scenario_name": "GeneralConversation",
+                    "@scenario_name": "Vins",
+                    "@effective_language": "L_RUS"
+                  },
+                  "ignore_answer": true,
+                  "type": "server_action",
+                  "is_led_silent": true
+                }
+              ]
+            },
+            {
+              "type": "action",
+              "title": "На билет",
+              "directives": [
+                {
+                  "name": "type",
+                  "payload": {
+                    "text": "На билет"
+                  },
+                  "type": "client_action",
+                  "sub_name": "gc_suggest",
+                  "is_led_silent": true
+                },
+                {
+                  "name": "on_suggest",
+                  "payload": {
+                    "button_id": "faafd920-cd2d84b2-f672a944-71b37cae",
+                    "@request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "caption": "На билет",
+                    "request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "scenario_name": "GeneralConversation",
+                    "@scenario_name": "Vins",
+                    "@effective_language": "L_RUS"
+                  },
+                  "ignore_answer": true,
+                  "type": "server_action",
+                  "is_led_silent": true
+                }
+              ]
+            },
+            {
+              "type": "action",
+              "title": "🔍 \"сколько стоит наушники jbl\"",
+              "directives": [
+                {
+                  "name": "@@mm_semantic_frame",
+                  "payload": {
+                    "typed_semantic_frame": {
+                      "search_semantic_frame": {
+                        "query": {
+                          "string_value": "сколько стоит наушники jbl"
+                        }
+                      }
+                    },
+                    "utterance": "сколько стоит наушники jbl",
+                    "analytics": {
+                      "product_scenario": "",
+                      "purpose": "search",
+                      "origin": "Scenario",
+                      "origin_info": ""
+                    },
+                    "@effective_language": "L_RUS"
+                  },
+                  "type": "server_action",
+                  "is_led_silent": true
+                },
+                {
+                  "name": "on_suggest",
+                  "payload": {
+                    "button_id": "e44717ac-7350af91-85ee146f-780bc339",
+                    "@request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "caption": "сколько стоит наушники jbl",
+                    "request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "scenario_name": "GeneralConversation",
+                    "@scenario_name": "Vins",
+                    "@effective_language": "L_RUS"
+                  },
+                  "ignore_answer": true,
+                  "type": "server_action",
+                  "is_led_silent": true
+                }
+              ]
+            },
+            {
+              "type": "action",
+              "title": "Что ты умеешь?",
+              "directives": [
+                {
+                  "name": "type",
+                  "payload": {
+                    "text": "Что ты умеешь?"
+                  },
+                  "type": "client_action",
+                  "sub_name": "gc_suggest",
+                  "is_led_silent": true
+                },
+                {
+                  "name": "on_suggest",
+                  "payload": {
+                    "button_id": "5d00bdfd-6fefa9a6-f5b470-b83ff5a8",
+                    "@request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "caption": "Что ты умеешь?",
+                    "request_id": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+                    "scenario_name": "GeneralConversation",
+                    "@scenario_name": "Vins",
+                    "@effective_language": "L_RUS"
+                  },
+                  "ignore_answer": true,
+                  "type": "server_action",
+                  "is_led_silent": true
+                }
+              ]
+            }
+          ]
+        },
+        "experiments": {},
+        "directives_execution_policy": "BeforeSpeech",
+        "directives": []
+      },
+      "voice_response": {
+        "should_listen": false
+      },
+      "effective_alice_2_settings": {
+        "mode": "Base"
+      },
+      "counteractivation_features": {
+        "has_directive": true,
+        "scenario_features": {}
+      }
+    },
+    "header": {
+      "name": "VinsResponse",
+      "refMessageId": "55e2eaa4-b254-45b3-b97d-18a4aa921927",
+      "messageId": "d725ae45-26270879-a82d80bf-98bc7b20",
+      "namespace": "Vins"
+    }
+  }
+}
+
