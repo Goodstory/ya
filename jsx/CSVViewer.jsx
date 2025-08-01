@@ -1,17 +1,21 @@
 import React, { useState } from "react";
 import Papa from "papaparse";
 
-// Простой стиль
+// Файлы на сервере — заполни актуальные!
+const files = [
+  { date: "2024-07-30", filename: "outputs_2024-07-30.csv" },
+  { date: "2024-07-29", filename: "outputs_2024-07-29.csv" },
+  // Добавляй остальные...
+];
+
 const cellStyle = "px-2 py-1 border-b text-sm";
-const thStyle =
-  "bg-gray-200 px-2 py-1 border-b cursor-pointer select-none text-left";
+const thStyle = "bg-gray-200 px-2 py-1 border-b cursor-pointer select-none text-left";
 
 function sortRows(rows, key, asc) {
   return [...rows].sort((a, b) => {
     if (!a[key]) return 1;
     if (!b[key]) return -1;
     if (key === "Цена") {
-      // Для числовой сортировки
       let av = parseFloat((a[key] || "").replace(/[^0-9.,]/g, "").replace(",", "."));
       let bv = parseFloat((b[key] || "").replace(/[^0-9.,]/g, "").replace(",", "."));
       return asc ? av - bv : bv - av;
@@ -27,8 +31,27 @@ export default function CSVViewer() {
   const [filter, setFilter] = useState("");
   const [sortKey, setSortKey] = useState("Запрос");
   const [sortAsc, setSortAsc] = useState(true);
+  const [selectedDate, setSelectedDate] = useState(""); // для селектора даты
+
+  async function loadFileByDate(date) {
+    setSelectedDate(date);
+    setRows([]); // Очистим данные на время загрузки
+    if (!date) return;
+    const file = files.find(f => f.date === date);
+    if (!file) return;
+    const res = await fetch(`/outputs/${file.filename}`); // папка с файлами
+    const text = await res.text();
+    Papa.parse(text, {
+      header: true,
+      skipEmptyLines: true,
+      complete: (results) => {
+        setRows(results.data);
+      },
+    });
+  }
 
   function onFileChange(e) {
+    setSelectedDate(""); // сбрасываем выбор даты
     const file = e.target.files[0];
     if (!file) return;
     Papa.parse(file, {
@@ -42,6 +65,7 @@ export default function CSVViewer() {
 
   function onDrop(e) {
     e.preventDefault();
+    setSelectedDate(""); // сбрасываем выбор даты
     if (e.dataTransfer.files.length) {
       Papa.parse(e.dataTransfer.files[0], {
         header: true,
@@ -54,7 +78,6 @@ export default function CSVViewer() {
   }
 
   function renderCell(cell, key) {
-    // Если это ссылка, превращаем в <a>
     if (
       typeof cell === "string" &&
       (cell.startsWith("http://") || cell.startsWith("https://"))
@@ -97,18 +120,33 @@ export default function CSVViewer() {
   return (
     <div className="max-w-6xl mx-auto p-4">
       <h2 className="text-2xl mb-2 font-bold">Таблица цен (outputs.csv)</h2>
-      <div
-        onDrop={onDrop}
-        onDragOver={(e) => e.preventDefault()}
-        className="border-2 border-dashed rounded p-3 mb-4 text-gray-500 hover:border-blue-500"
-      >
-        Перетащи сюда свой CSV-файл или выбери файл вручную:
-        <input
-          type="file"
-          accept=".csv"
-          className="block mt-2"
-          onChange={onFileChange}
-        />
+      <div className="mb-4 flex flex-wrap items-end gap-3">
+        <div
+          onDrop={onDrop}
+          onDragOver={(e) => e.preventDefault()}
+          className="border-2 border-dashed rounded p-3 text-gray-500 hover:border-blue-500"
+        >
+          Перетащи свой CSV-файл или выбери вручную:
+          <input
+            type="file"
+            accept=".csv"
+            className="block mt-2"
+            onChange={onFileChange}
+          />
+        </div>
+        <div>
+          <label className="font-semibold">Или выбери по дате: </label>
+          <select
+            value={selectedDate}
+            className="border px-2 py-1 rounded"
+            onChange={e => loadFileByDate(e.target.value)}
+          >
+            <option value="">-- Дата --</option>
+            {files.map(f => (
+              <option key={f.date} value={f.date}>{f.date}</option>
+            ))}
+          </select>
+        </div>
       </div>
       <div className="flex gap-2 mb-3">
         <input
